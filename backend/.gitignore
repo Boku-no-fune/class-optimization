@@ -1,0 +1,13 @@
+/.bundle
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+/config/master.key
+/config/credentials/*.key
+/public/assets
+/storage/*
+!/storage/.keep
+.byebug_history
+*.swp
+.DS_Store
