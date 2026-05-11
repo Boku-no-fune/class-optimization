@@ -1,0 +1,11 @@
+[phases.setup]
+nixPkgs = ["ruby_3_2", "postgresql"]
+
+[phases.install]
+cmds = ["bundle install"]
+
+[phases.build]
+cmds = ["bundle exec bootsnap precompile --gemfile app/ lib/"]
+
+[start]
+cmd = "bundle exec rails db:migrate && bundle exec rails server -p $PORT -b 0.0.0.0"
